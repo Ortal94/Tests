@@ -33,7 +33,7 @@ public class Test_2_android extends BaseTest {
 		String apps = client.getInstalledApplications();
 		if (!apps.contains("com.example.ortalyona.game")) {
 			//client.install(dir + "\\apps\\myApp.apk", true, true);
-			client.install("cloud:uniqueName=Game", true, true);
+			client.install("cloud:uniqueName=DotGame", true, true);
 
 		}
 		client.launch("com.example.ortalyona.game/.Login", true, true);

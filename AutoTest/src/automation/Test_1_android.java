@@ -65,7 +65,7 @@ public class Test_1_android extends BaseTest {
 //				client.elementSendText("NATIVE", "hint=Username", 0, " "); // send the text from the csv file to "user
 //																			// name"
 //			} else {
-//				client.elementSendText("NATIVE", "hint=Username", 0, csvUserName); // send the text from the csv file to
+				client.elementSendText("NATIVE", "hint=Username", 0, csvUserName); // send the text from the csv file to
 //																					// "user name"
 //
 //			}
@@ -74,12 +74,12 @@ public class Test_1_android extends BaseTest {
 //																			// "password"
 //
 //			} else {
-//				client.elementSendText("NATIVE", "hint=Password", 0, csvPassword); // send the text from the csv file to
+				client.elementSendText("NATIVE", "hint=Password", 0, csvPassword); // send the text from the csv file to
 //																					// "password"
 //			}
 //			client.closeKeyboard();
 //
-//			client.click("NATIVE", "text=Login", 0, 1);
+			client.click("NATIVE", "text=Login", 0, 1);
 //			if (client.isElementFound("NATIVE", "xpath=//*[@text='Invalid username or password!']", 0)) // check if user
 //																										// name or
 //																										// password are

@@ -53,9 +53,9 @@ public class Test_1_ios extends BaseTest {
 //			String[] values = data.split(","); // Split the line to an array
 //			csvUserName = values[0];
 //			csvPassword = values[1];
-//			client.elementSendText("NATIVE", "xpath=//*[@placeholder='Username']", 0, csvUserName);
-//			client.elementSendText("NATIVE", "xpath=//*[@placeholder='Password']", 0, csvPassword);
-//			client.click("NATIVE", "xpath=//*[@text='Login']", 0, 1);
+			client.elementSendText("NATIVE", "xpath=//*[@placeholder='Username']", 0, csvUserName);
+			client.elementSendText("NATIVE", "xpath=//*[@placeholder='Password']", 0, csvPassword);
+			client.click("NATIVE", "xpath=//*[@text='Login']", 0, 1);
 //			if (client.isElementFound("NATIVE", "xpath=//*[@text='Invalid username or password!']", 0)) // check if user
 //																										// name or
 //																										// password are
