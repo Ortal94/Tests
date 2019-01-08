@@ -72,8 +72,8 @@ public class TestRunner {
 		
 		try {
 			// read from the configuration file
-			sc = new Scanner(new File("Conf.txt"));
-			conf = sc.nextLine();
+			//sc = new Scanner(new File("Conf.txt"));
+			conf = "all";//sc.nextLine();
 			connectedDevice = client.getConnectedDevices();
 			client.releaseClient();
 			listOfConnectedDevice = connectedDevice.split("\n");

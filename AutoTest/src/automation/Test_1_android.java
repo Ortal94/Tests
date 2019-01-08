@@ -49,45 +49,45 @@ public class Test_1_android extends BaseTest {
 		if (deviceversion > 5) {
 			client.setNetworkConnection("bluetooth", false);
 		}
-		try {
-			inputStream = new Scanner(new File("login.csv"));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		inputStream.nextLine();// ignore the first line - Headlines
-
-		while (inputStream.hasNext()) {
-			String data = inputStream.nextLine(); // Read line
-			String[] values = data.split(","); // Split the line to an array
-			csvUserName = values[0];
-			csvPassword = values[1];
-			if (csvUserName.isEmpty()) {
-				client.elementSendText("NATIVE", "hint=Username", 0, " "); // send the text from the csv file to "user
-																			// name"
-			} else {
-				client.elementSendText("NATIVE", "hint=Username", 0, csvUserName); // send the text from the csv file to
-																					// "user name"
-
-			}
-			if (csvPassword.isEmpty()) {
-				client.elementSendText("NATIVE", "hint=Password", 0, " "); // send the text from the csv file to
-																			// "password"
-
-			} else {
-				client.elementSendText("NATIVE", "hint=Password", 0, csvPassword); // send the text from the csv file to
-																					// "password"
-			}
-			client.closeKeyboard();
-
-			client.click("NATIVE", "text=Login", 0, 1);
-			if (client.isElementFound("NATIVE", "xpath=//*[@text='Invalid username or password!']", 0)) // check if user
-																										// name or
-																										// password are
-																										// not correct.
-				client.click("NATIVE", "text=Close", 0, 1);
-			else
-				break;
-		}
+//		try {
+//			inputStream = new Scanner(new File("login.csv"));
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		inputStream.nextLine();// ignore the first line - Headlines
+//
+//		while (inputStream.hasNext()) {
+//			String data = inputStream.nextLine(); // Read line
+//			String[] values = data.split(","); // Split the line to an array
+			csvUserName = "company";//values[0];
+			csvPassword = "company";//values[1];
+//			if (csvUserName.isEmpty()) {
+//				client.elementSendText("NATIVE", "hint=Username", 0, " "); // send the text from the csv file to "user
+//																			// name"
+//			} else {
+//				client.elementSendText("NATIVE", "hint=Username", 0, csvUserName); // send the text from the csv file to
+//																					// "user name"
+//
+//			}
+//			if (csvPassword.isEmpty()) {
+//				client.elementSendText("NATIVE", "hint=Password", 0, " "); // send the text from the csv file to
+//																			// "password"
+//
+//			} else {
+//				client.elementSendText("NATIVE", "hint=Password", 0, csvPassword); // send the text from the csv file to
+//																					// "password"
+//			}
+//			client.closeKeyboard();
+//
+//			client.click("NATIVE", "text=Login", 0, 1);
+//			if (client.isElementFound("NATIVE", "xpath=//*[@text='Invalid username or password!']", 0)) // check if user
+//																										// name or
+//																										// password are
+//																										// not correct.
+//				client.click("NATIVE", "text=Close", 0, 1);
+//			else
+//				break;
+//		}
 		client.getElementCountIn("NATIVE", "xpath=//*[@id='scrollView1']", 0, "Inside", "NATIVE",
 				"class=android.widget.Button", 0, 0);
 		String oldBalance = client.getTextIn("NATIVE", "id=makePaymentButton", 0, "WEB", "Up", 0, 0);
